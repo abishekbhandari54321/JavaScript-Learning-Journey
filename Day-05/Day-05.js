@@ -64,3 +64,28 @@ console.log(double(10)); // 20
 
 console.log("...............................");
 
+//callback function:
+
+function userInput(name, callback){
+    console.log("Hello, " + name);
+    callback();
+}
+
+function sayBye(){
+    console.log("Goodbye!");
+}
+
+userInput("Abishek", sayBye);
+
+console.log("...............................");
+
+//Higher Order function:
+function higherOrder(callback){
+    console.log("This is before callback");
+    callback();
+    console.log("This is after callback");
+}
+
+higherOrder(function(){
+    console.log("This is the callback function");
+});
