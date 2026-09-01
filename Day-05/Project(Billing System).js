@@ -1,3 +1,5 @@
+// Billing System Project:
+
 function calculateTotal(price, quantity){
     return price * quantity;
 }
@@ -44,6 +46,7 @@ function thankYouMessage(){
 }
 
 generateReceipt("Laptop", finalAmount, thankYouMessage);
+
 
 
 
