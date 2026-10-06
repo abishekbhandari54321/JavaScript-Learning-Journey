@@ -47,12 +47,12 @@ Safely handles missing/null data AND provides a clean fallback — extremely com
 - Destructuring cleanly extracts just the needed pieces from either the original or the updated copy.
 - Directly mutating an object instead (e.g. `user1.address.city = "X"`) changes the ORIGINAL for every part of the program holding a reference to it — this causes serious bugs in real applications, especially in React, which relies on comparing old vs. new data to decide when to re-render the UI. Mutating directly makes that comparison impossible, since there's no "old version" left to compare against.
 
-## 6. Interview-ready Q&A summary
+## 6. Interview-ready Q&A Summary
 
-| Question                                               | Answer                                                                                                      |
-| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- | --- | -------------------------------------- | --- | ------------------------------------------------------ |
-| ?? vs                                                  |                                                                                                             | ?   | ?? only falls back for null/undefined; |     | falls back for ANY falsy value (0, "", false, NaN too) |
-| What does ?. prevent?                                  | Crashes from trying to access a property on something that's null/undefined partway through a chain         |
-| Does ?. care if a property is "missing" vs holds null? | No — it treats both the same; it stops at null/undefined VALUES, regardless of why                          |
-| Named vs default export?                               | Named: multiple per file, curly-brace import, exact name. Default: one per file, no braces, any import name |
-| Why avoid directly mutating objects?                   | Breaks the ability to compare old vs new data — critical for React's re-rendering logic                     |
+| Question                                                    | Answer                                                                                                                                              |
+| ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --- | -------------------------------------------------------- | --- | -------------------------------------------------------------------- |
+| `??` vs `                                                   |                                                                                                                                                     | `   | `??` uses the fallback only for `null` or `undefined`. ` |     | `uses the fallback for any falsy value such as`0`, `false`, or `""`. |
+| What does `?.` prevent?                                     | It prevents errors when trying to access a property on `null` or `undefined`.                                                                       |
+| Does `?.` care if a property is missing or contains `null`? | No. Both result in `undefined`, so `?.` stops safely.                                                                                               |
+| Named vs Default Export?                                    | Named exports can have multiple exports per file and use `{ }` when importing. Default exports allow one main export per file and do not use `{ }`. |
+| Why avoid directly mutating objects?                        | It makes it harder to compare old and new data and can cause problems with UI updates, especially in React.                                         |
