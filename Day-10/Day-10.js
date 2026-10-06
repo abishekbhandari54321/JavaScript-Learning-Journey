@@ -1,5 +1,5 @@
 //How Objects Work Internally:
-/*
+
 console.log("(How Object work internally): ");
 
 const person = { name: "Abishek" };
@@ -220,7 +220,7 @@ console.log(MathHelper.square(5)); // 25
 const helper = new MathHelper();
 // console.log(helper.square(5)); // ERROR — square() is NOT available on instances
 
-console.log("........................................................................"); */
+console.log("........................................................................"); 
 
 //Task 1:
 
