@@ -61,7 +61,7 @@ one();
 console.log("E");
 
 
-console.log("---------- Test 4 ----------");
+console.log("---------- Task 4 ----------");
 
 Promise.resolve().then(() => {
     console.log("P1");
@@ -71,19 +71,21 @@ Promise.resolve().then(() => {
 console.log("S");
 
 
-console.log("---------- Test 6 ----------");
+console.log("---------- Test 4 ----------");
 
 console.log("1");
 setTimeout(() => console.log("2"), 0);
 Promise.resolve().then(() => console.log("3"));
 console.log("4");
 
+console.log("---------- Test 6 ----------");
 
 async function run() {
     console.log("X");
     await null;
     console.log("Y");
 }
+
 
 console.log("Start");
 run();
