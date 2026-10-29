@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <title>Day 16 - DOM</title>
     <style>
-        .highlight { background: yellow; }
+        .highlight { background: rgb(250, 250, 194); color:red;}
         .done { text-decoration: line-through; color: gray; }
         .body {
             background-color: #212121;
             color: #ffffff;
         }
+
+        .h2{
+            color: red;
+
+        }
+
+        .done {
+    text-decoration: line-through;
+    color: gray;
+}
+
     </style>
 </head>
 <body class="body">
     <h1 id="title">Hello DOM <span style = "display: none">test-text</span></h1>
+    <div class="h2">
     <h2>This is h2 one</h2>
     <h2>This is h2 two</h2>
     <h2>This is h2 three</h2>
+    </div>
     <p class="text">First paragraph</p>
     <p class="text">Second paragraph</p>
     <button id="btn" title="Click this button">Click me</button>
@@ -25,6 +38,72 @@
         <li>Apple</li>
         <li>Banana</li>
     </ul>
+
+<a href="https://www.harvard.edu/" id="harvard">Harvard University</a>
+
+<button id="modeBtn">Change Mode</button>
+
+<!-- Forms -->
+<form id="form">
+    <input type="text" id="nameInput" placeholder="Your name">
+    <button type="submit">Greet</button>
+</form>
+<p id="greeting"></p>
+
+<!-- Event Bubbling  -->
+<div id="outer" style="padding:20px; background:#eee">
+    Outer
+    <button id="inner">Inner</button>
+</div>
+
+<h1 id="h1">Heading 1</h1>
+<button id="button2">Practice 2</button>
+
+<ul id="ToDoList">
+    <li>Learn JavaScript</li>
+    <li>Practice DOM manipulation</li>
+</ul>
+
+<input type="text" id="itemInput" placeholder="Enter a new task">
+
+<button id="addBtn">Add</button>
+
+
+<div id="grandparent">
+    Grandparent
+    <div id="parent">
+        Parent
+        <div id="child">
+            Child
+        </div>
+    </div>
+</div>
+
+<ul id="todoList">
+    <li>Learn JavaScript</li>
+    <li>Practice event bubbling</li>
+    <li>Understand event delegation</li>
+</ul>
+
+<button id="addItem">Add New Task</button>
+
+
+<h2>User Information Form</h2>
+
+    <form id="userForm">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <br><br>
+
+        <label for="ageInput">Age:</label>
+        <input type="text" id="ageInput" placeholder="Enter your age">
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="message"></p>
+
 
     <script src="script.js"></script>
 </body>
