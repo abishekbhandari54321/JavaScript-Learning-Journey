@@ -82,7 +82,7 @@ list.firstElementChild.remove();
 // Event Listener:
 
 btn.addEventListener("click", function (event) {
-    console.logw("Button clicked!");
+    console.log("Button clicked!");
     console.log(event.type);
     console.log(event.target.id);
 });
@@ -90,7 +90,7 @@ btn.addEventListener("click", function (event) {
 document.getElementById('harvard').addEventListener("click", function (e) { 
     e.preventDefault();
     e.stopPropagation();
-    console.log("Youtube clicked !");
+    console.log("Harvard clicked !");
 });
 
 // Mode Button:
@@ -99,14 +99,13 @@ let modeBtn = document.querySelector('#modeBtn');
 let currentMode = 'light'; //dark
 
 modeBtn.addEventListener("click", () => {
-    if(currentMode === 'light'){
-    currentMode = 'dark';
-    document.querySelector("body").style.backgroundColor = "#212121";
-     }
-    else{
-    currentMode = 'light';
-    document.querySelector("body").style.backgroundColor = "#fff0f0"
-     }
+    if (currentMode === 'light') {
+        currentMode = 'dark';
+        document.querySelector("body").style.backgroundColor = "#212121";
+    } else {
+        currentMode = 'light';
+        document.querySelector("body").style.backgroundColor = "#fff0f0";
+    }
     console.log(currentMode);
 });
 
@@ -236,11 +235,11 @@ addItemBtn.addEventListener("click", function () {
 
 // 6:
 console.log("JavaScript file loaded!");
-console.log("Name input:", document.getElementById("nameInput"));
+console.log("Name input:", document.getElementById("nameInput2"));
 console.log("Form:", document.getElementById("userForm"));
 
 const userForm = document.getElementById("userForm");
-const nameInput = document.getElementById("nameInput");
+const nameInput = document.getElementById("nameInput2");
 const ageInput = document.getElementById("ageInput");
 const message = document.getElementById("message");
 
