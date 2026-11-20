@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Storage Practice</title>
+</head>
+<body>
+
+    <h1>JavaScript localStorage Practice</h1>
+
+<script src="script.js">
+    
+console.log("----------- localStorage and sessionStorage -----------");
+
+localStorage.setItem("theme", "dark");
+console.log(localStorage.getItem("theme"));
+console.log(localStorage.getItem("missing"));
+
+const settings = { theme: "dark", fontSize: 16 };
+localStorage.setItem("settings", JSON.stringify(settings));
+const saved = JSON.parse(localStorage.getItem("settings"));
+console.log(saved.fontSize);
+
+localStorage.removeItem("theme");
+console.log(localStorage.getItem("theme"));
+
+    </script>
+</body>
+</html>
